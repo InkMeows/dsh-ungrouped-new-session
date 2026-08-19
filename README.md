@@ -1,5 +1,8 @@
 # @dsh-external/dsh-ungrouped-new-session
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.0.2-blue)](https://github.com/InkMeows/dsh-ungrouped-new-session/releases)
+
 Adds a real **“start a conversation outside any workspace”** entry to the DSH
 sidebar, and lets a blank ungrouped conversation actually chat **without
 picking a workspace**.

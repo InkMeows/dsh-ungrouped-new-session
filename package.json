@@ -3,6 +3,14 @@
   "version": "0.0.2",
   "description": "Adds a real \"start a conversation outside any workspace\" entry to the DSH sidebar, and lets blank ungrouped conversations chat without picking a workspace.",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/InkMeows/dsh-ungrouped-new-session.git"
+  },
+  "homepage": "https://github.com/InkMeows/dsh-ungrouped-new-session",
+  "bugs": {
+    "url": "https://github.com/InkMeows/dsh-ungrouped-new-session/issues"
+  },
   "main": "./lib/index.js",
   "types": "./lib/types/index.d.ts",
   "files": [

@@ -7,8 +7,14 @@
  * the standard pipeline.
  */
 
-import type { Context } from 'cordis'
 import z from 'schemastery'
+
+/**
+ * This plugin is browser-only and the host entry is a no-op, so we deliberately
+ * avoid importing `Context` from `cordis`: the standalone build compiles against
+ * the public npm package, while DSH ships its own compatible fork at runtime.
+ */
+type ContextLike = unknown
 
 export const name = '@dsh-external/dsh-ungrouped-new-session'
 export const inject = []
@@ -17,4 +23,4 @@ export interface Config {}
 
 export const Config = z.object({})
 
-export function apply(_ctx: Context, _config: Config): void {}
+export function apply(_ctx: ContextLike, _config: Config): void {}

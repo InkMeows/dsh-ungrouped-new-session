@@ -59,8 +59,11 @@ npm run pack         # package lib/ into a tarball
 ```
 
 The build is self-contained — it no longer requires a DSH checkout.
-(Peers like `cordis` / `schemastery` / `react` are provided by the host at
-runtime and are only listed as dev dependencies for local compilation.)
+The repo ships a `.npmrc` with `legacy-peer-deps=true`: the DSH client peers
+(`@deepseek-ai/dsh-client-*`) are **not published to npm**, so `npm install`
+skips installing them and only pulls the dev tooling needed to build
+(`cordis` / `schemastery` / `typescript` / `tsdown`). At runtime the real DSH
+host provides those peers.
 
 ## How it stays clean
 

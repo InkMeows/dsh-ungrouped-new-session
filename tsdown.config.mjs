@@ -1,7 +1,8 @@
+// Plain JS config so tsdown does NOT need the `unrun` TS-config loader
+// (which only supports Node 22.13+/24). Keep in sync with tsdown.config.ts' source of truth.
 import { fileURLToPath } from 'node:url'
-import type { UserConfig } from 'tsdown'
 
-const PLUGIN_ID = "@dsh-external/dsh-ungrouped-new-session"
+const PLUGIN_ID = '@dsh-external/dsh-ungrouped-new-session'
 
 const CLIENT_EXTERNALS = [
   'react', 'react/jsx-runtime', 'react-dom', 'react-dom/client',
@@ -10,7 +11,7 @@ const CLIENT_EXTERNALS = [
   '@deepseek-ai/dsh-client-runtime/client',
 ]
 
-const clientBundle: UserConfig = {
+const clientBundle = {
   entry: { client: 'src/client/index.ts' },
   outDir: 'lib',
   format: 'cjs',
@@ -23,7 +24,7 @@ const clientBundle: UserConfig = {
   },
   deps: {
     neverBundle: [...CLIENT_EXTERNALS],
-    alwaysBundle: (id: string) => !CLIENT_EXTERNALS.includes(id),
+    alwaysBundle: (id) => !CLIENT_EXTERNALS.includes(id),
   },
   outputOptions: {
     entryFileNames: 'client.js',
@@ -34,4 +35,4 @@ const clientBundle: UserConfig = {
   },
 }
 
-export default [clientBundle] satisfies UserConfig[]
+export default [clientBundle]

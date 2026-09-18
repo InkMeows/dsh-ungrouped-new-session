@@ -7,7 +7,7 @@
  * the standard pipeline.
  */
 
-import z from 'schemastery'
+import z from '@deepseek-ai/schemastery'
 
 /**
  * This plugin is browser-only and the host entry is a no-op, so we deliberately

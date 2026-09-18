@@ -15,6 +15,7 @@
   "types": "./lib/types/index.d.ts",
   "files": [
     "lib",
+    "cordis.patch.yml",
     "README.md",
     "LICENSE"
   ],
@@ -33,12 +34,12 @@
     "@deepseek-ai/dsh-client-ui-slots": ">=0.0.1-rc <2",
     "cordis": ">=4.0.0-rc <5",
     "react": "^18.2.0",
-    "schemastery": "^3.18.0"
+    "@deepseek-ai/schemastery": ">=3.18.0 <4"
   },
   "devDependencies": {
     "@types/node": "^24.13.3",
     "cordis": ">=4.0.0-rc <5",
-    "schemastery": "^3.18.0",
+    "@deepseek-ai/schemastery": ">=3.18.0 <4",
     "tsdown": "^0.22.14",
     "typescript": "^5.9.0"
   },
@@ -61,6 +62,9 @@
     "./package.json": "./package.json"
   },
   "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "inject": [
         "@deepseek-ai/dsh-client-locale",

@@ -1,0 +1,5 @@
+# dsh-ungrouped-new-session bundle patch: declares its own loader row so the
+# package is part of a profile's tree (the client half is the whole plugin).
+- insert:
+    - id: ungrouped-new-session
+      name: '@dsh-external/dsh-ungrouped-new-session'
